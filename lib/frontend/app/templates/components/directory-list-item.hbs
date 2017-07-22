@@ -1,0 +1,15 @@
+{{#if isDirectory}}
+<a href="#" class="btn-link btn-block js-showDirectoryButton" {{bind-attr title=path}}>{{name}}/</a>
+{{else}}
+
+{{#if isFile}}
+<a href="#" class="btn-link btn-block js-showFileButton" {{bind-attr title=path}}>{{name}}</a>
+{{else}}
+
+{{#if isParent}}
+<a href="#" class="btn-link btn-block js-goToParentDirectory" title="Go to parent directory">..</a >
+{{/if}}
+
+{{/if}}
+
+{{/if}}
